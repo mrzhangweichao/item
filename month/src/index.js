@@ -10,6 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 import Pandect from './components/pandect.js'
 
+FastClick.attach(document.body)
+Es6Promise.polyfill()
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

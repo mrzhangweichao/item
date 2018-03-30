@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-03-29 17:05:13
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-03-29 18:01:31
+* @Last Modified time: 2018-03-30 10:14:54
 */
 
 import React, { Component } from 'react';
@@ -22,12 +22,14 @@ class Menu extends Component {
   render() {
     return (
       <div className="menu">
-          <ul>
+          <ul className="title_nav clearfix">
               {
                 this.state.menuList.map((item,index) => {
                     return(
-                        <li key={index}>
-                           <NavLink to={item.url}>{item.title}</NavLink>
+                        <li className="fl" key={index}>
+                           <NavLink activeClassName="is-active" to={item.url}>
+                               {item.title}
+                           </NavLink>
                         </li>
                     )
                 })
